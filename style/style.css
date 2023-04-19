@@ -30,6 +30,13 @@ header {
   flex-direction: row;
   gap: 5px;
   height: 48px;
+  margin-bottom: 100px;
+}
+header .logo:hover {
+  cursor: pointer;
+}
+header .logo svg:hover path:first-child {
+  fill: gold;
 }
 
 header div:nth-child(1) {
@@ -50,9 +57,7 @@ header div:nth-child(2) {
 .search * {
   line-height: 16px;
   font-size: 16px;
-  
 }
-
 
 .search input {
   flex: 1;
@@ -62,11 +67,12 @@ header div:nth-child(2) {
   border-radius: 5px;
   background-color: #06181c;
   font-weight: 400;
-
+  color:#fff;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
+  margin-right: 0.2rem;
 }
 .search button {
   display: flex;
@@ -79,43 +85,43 @@ header div:nth-child(2) {
   background-color: #065e7c;
   color: white;
   font-weight: 700;
-
+  cursor: pointer;
 }
 
 table {
-  margin-top: 100px;
-  /* border: 1px solid #065e7c; */
   width: 100%;
   border-collapse: collapse;
+  border-spacing: 0;
+  max-height: 40vh;
+}
+
+table {
+  height: 400px;
 }
 
 table * {
   font-size: 1.4rem;
   color: var(--text-color);
+  box-sizing: border-box;
 }
+
 table th {
- 
   text-align: left;
   font-weight: normal;
   padding: 1.5rem;
 }
+
 table thead th:first-child {
   border-top-left-radius: 12px;
 }
+
 table thead th:last-child {
   border-top-right-radius: 12px;
 }
-table tbody tr{
-  border: 1px solid #065e7c;
-}
-table tbody tr:last-child {
-background-color: red;}
-
 
 table td {
   padding: 1.5rem;
   text-align: left;
- 
 }
 
 thead tr th {
@@ -133,10 +139,14 @@ thead tr th {
   line-height: 160%;
   font-size: 700;
 }
-
+tr {
+  border-top: 1px solid #065e7c;
+}
+tbody tr {
+  border-radius: 100px;
+}
 tbody tr:nth-child(even) td {
   background-color: #043444;
-  
 }
 tbody tr:nth-child(odd) td {
   background-color: #06161b;
@@ -146,6 +156,7 @@ td.user {
   display: flex;
   align-items: center;
   gap: 1rem;
+  /* height: 103px; */
 }
 td.user a {
   text-decoration: none;
@@ -169,6 +180,10 @@ td .remove {
   font-size: 20px;
   line-height: 160%;
 }
+.content {
+  border: 1px solid #065e7c;
+  border-radius: 12px;
+}
 
 table tbody tr:last-child td:last-child {
   border-bottom-right-radius: 12px;
@@ -176,4 +191,17 @@ table tbody tr:last-child td:last-child {
 
 table tbody tr:last-child td:nth-child(1) {
   border-bottom-left-radius: 12px;
+  /* border:1px solid red; */
+}
+button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button:hover svg path{
+  fill:#065E7C;
+}
+button:hover{
+  background-color: #FFF;
+    color: #065E7C
 }
