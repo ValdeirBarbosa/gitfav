@@ -8,12 +8,12 @@ body {
   height: calc(100vh- 4rem);
   background: #2f2f33;
   height: 100vh;
+  position: relative;
 }
 body * {
   font-family: "Roboto", sans-serif;
 }
 
-#app,
 header {
   max-width: 70rem;
   max-height: 43rem;
@@ -53,23 +53,71 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 700;
+  word-spacing: 3px;;
   width: 170px;
   gap: 8px;
   background-color: #065e7c;
+  cursor: pointer;
+}
+.search button:hover svg path ,
+.search button:hover {
+  background-color: #eef3f5;
+  color: #065e7c;
+  fill:#065e7c;
 }
 
+
 #app {
+  margin: 0 auto;
+  max-width: 70rem;
   border-radius: 0.4rem;
   max-height: 615px;
   border: 1px solid #4a808c;
   border-radius: 0.4rem;
   overflow-y: scroll;
+  position: relative;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  position: absolute;
+  width: 6px;
+  height: 122px;
+  border-radius: 10px;
+  right: -20px;
+  z-index: 2;
+
+}
+
+::-webkit-scrollbar-track {
+  position: absolute;
+  width: 6px;
+  border-radius: 10px;
+  /* background: #4a808c46; */
+  background: #06181C;
+  right: -20px;
+  z-index: 2;
+}
+::-webkit-scrollbar-thumb {
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  left: 1266px;
+  top: 320px;
+  background: #4a808c;
+  border-radius: 10px;
+  right: -20px;
+  z-index: 2;
+}
+::-webkit-scrollbar-thumb:hover{
+  background: #456c75;
 }
 
 table {
   border-radius: 12px;
   width: 100%;
   border-collapse: collapse;
+  max-height: 500px;
 }
 
 table * {
@@ -79,14 +127,14 @@ table * {
   font-size: 20px;
   line-height: 160%;
 }
-table thead tr {
+
+table th {
   height: 64px;
+  padding: 0 40px;
 }
 table thead tr th {
   text-align: left;
-  padding: 0 40px;
   background-color: #092d38;
-  word-spacing: px;
 }
 table th:first-child {
   border-top-left-radius: 0.4rem;
@@ -107,27 +155,21 @@ table tr td:nth-child(1) {
 table tr td:nth-child(2),
 table tr td:nth-child(3) {
   max-width: 219px;
+  padding: 0 60px;
 }
 table tr td:nth-child(4) {
   max-width: 178px;
 }
 
-table tbody tr {
-  height: 104px;
-}
 table tbody tr:nth-child(odd) td {
   background: rgba(6, 22, 27, 0.5);
-  border-top: 1px solid #4A808C;
-
-
+  border-top: 1px solid #4a808c;
 }
 table tbody tr:nth-child(even) td {
   background-color: #092d38;
-    border-top: 1px solid #4A808C;
-
+  border-top: 1px solid #4a808c;
 }
 table tbody tr td {
-  height: 140px;
   padding: 40px 24px;
 }
 
