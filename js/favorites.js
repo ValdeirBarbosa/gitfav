@@ -1,5 +1,4 @@
-
-import { GithubUser } from "./githubusers.js"
+import { GithubUser } from "./githubUser.js"
 
 
 export class Favorites {
@@ -60,7 +59,6 @@ export class FavoritesView extends Favorites {
 
     onaddPerson() {
         const addButton = this.root.querySelector('.search button')
-        console.log("aqui")
         addButton.onclick = () => {
             const { value } = this.root.querySelector('.search input')
             this.add(value)
@@ -77,7 +75,7 @@ export class FavoritesView extends Favorites {
             row.querySelector('.user a').href = `https://github.com/${user.login}`
             row.querySelector('.user img').alt = `Imagem do perfil do ${user.name}`
             row.querySelector('.user p').textContent = user.name
-            row.querySelector('.user span').textContent = user.login
+            row.querySelector('.user span').textContent = `/${user.login}`
             row.querySelector('.repositories').textContent = user.public_repos
             row.querySelector('.followers').textContent = user.followers
             this.tbody.appendChild(row)
@@ -107,7 +105,7 @@ export class FavoritesView extends Favorites {
         </td>
         <td class="repositories">76</td>
         <td class="followers">9589</td>
-        <td><button class="remove">&times;</button></td>`
+        <td><button class="remove">Remover</button></td>`
 
         return tr
 
