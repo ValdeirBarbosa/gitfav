@@ -82,24 +82,22 @@ header {
 ::-webkit-scrollbar {
   position: absolute;
   width: 6px;
+  position: fixed;
+ 
 
-  border-radius: 10px;
-  right: -20px;
-  z-index: 2;
 
 }
 
 ::-webkit-scrollbar-track {
   position: absolute;
-  width: 6px;
+  width:6px;
   border-radius: 10px;
-  /* background: #4a808c46; */
-  background: #06181C;
+  position: relative;
   z-index: 2;
 }
 ::-webkit-scrollbar-thumb {
   position: absolute;
-  width: 6px;
+  width:6px;
   height: 12px;
   left: 1266px;
   top: 320px;
@@ -208,6 +206,6 @@ td.user img:hover{
 td .remove {
   background: none;
   border: none;
-  color: red;
+  color: rgb(182, 33, 33);
   cursor: pointer;
 }

@@ -16,7 +16,7 @@ export class Favorites {
   }
   async add(username) {
     try{
-      const userExists = this.entries.find(entry => entry.login === username)
+      const userExists = this.entries.find(entry => entry.login.toLowerCase() === username.toLowerCase())
 
       if(userExists){
         throw new Error(`Usuário ${username} já cadastrado!`)
@@ -71,7 +71,8 @@ export class FavoritesView extends Favorites {
       row.querySelector('.followers').textContent = user.followers
 
       row.querySelector('.remove').onclick = () => {
-        const isOk = confirm(`Deseja remover ${user.name} da lista de favoritos?`)
+        const profileToRemove = user.name === null ? user.login : user.name
+        const isOk = confirm(`Deseja remover ${profileToRemove} da lista de favoritos?`)
         if (isOk) {
           this.delete(user)
         }
