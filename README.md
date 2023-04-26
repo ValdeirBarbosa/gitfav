@@ -2,8 +2,11 @@
 # GitFav
 
 Projeto em JS, aplicando lições aprendidas no nivel 6 do Explorer @Rocketseat.
-Acesse o resultado pelo link 
-[GitFav](https://valdeirbarbosa.github.io/gitfav/)
+
+
+Acesse o resultado pelo link [GitFav](https://valdeirbarbosa.github.io/gitfav/)
+
+## Neste nivel foi abordado os seguintes temas neste nivel:
 
 1. Conceitos de SPA;
 2. Utilização do Event.preventDefault();
@@ -25,4 +28,4 @@ Acesse o resultado pelo link
 18. Async functions;
 19. Try, catch e throw;
 
-image.png
+![image](https://user-images.githubusercontent.com/6127742/234646227-b69a92fc-a108-4015-9d39-b170be50e639.png)
