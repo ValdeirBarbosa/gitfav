@@ -11,9 +11,27 @@ export class Favorites {
     this.entries = JSON.parse(localStorage.getItem('@gitfav:')) || []
     console.log(this.entries)
   }
+  save(){
+    localStorage.setItem('@gitfav:',JSON.stringify(this.entries))
+  }
   async add(username) {
-    const user = await GithubUser.search(username)
-    console.log(user)
+    try{
+      const userExists = this.entries.find(entry => entry.login === username)
+
+      if(userExists){
+        throw new Error(`Usuário ${username} já cadastrado!`)
+      }
+      const user = await GithubUser.search(username)
+      if(user.login === undefined){
+        throw new Error(`Usuario ${username} não encontrado!`)
+      }
+      this.entries = [user,...this.entries]
+      this.update()
+      this.save()
+    }catch(error){
+      alert(error.message)
+    }
+
   }
 
   delete(user) {
@@ -21,7 +39,7 @@ export class Favorites {
       entry.login !== user.login)
     this.entries = filteredEntries
     this.update()
-    // this.save()
+    this.save()
   }
 
 }
@@ -76,7 +94,9 @@ export class FavoritesView extends Favorites {
   createRow() {
     const tr = document.createElement('tr')
     tr.innerHTML = `<td class="user">
+                      <a href="https://github.com/maykbrito" target="_blank">
                       <img src="https://github.com/maykbrito.png" alt="Imagem de maykbrito"/>
+                      </a>
                       <a href="https://github.com/maykbrito" target="_blank">
                         <p>Mayk Brito</p><span>maykbrito</span></a>
                    </td>

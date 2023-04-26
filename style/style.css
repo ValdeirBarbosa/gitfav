@@ -75,14 +75,14 @@ header {
   max-height: 615px;
   border: 1px solid #4a808c;
   border-radius: 0.4rem;
-  overflow-y:auto;
+  overflow-y: scroll;
   position: relative;
   scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
   position: absolute;
   width: 6px;
-  height: 122px;
+
   border-radius: 10px;
   right: -20px;
   z-index: 2;
@@ -95,7 +95,6 @@ header {
   border-radius: 10px;
   /* background: #4a808c46; */
   background: #06181C;
-  right: -20px;
   z-index: 2;
 }
 ::-webkit-scrollbar-thumb {
@@ -170,7 +169,7 @@ table tbody tr:nth-child(even) td {
   border-top: 1px solid #4a808c;
 }
 table tbody tr td {
-  padding: 40px 24px;
+  padding: 1rem 0.5rem
 }
 
 td.user {
@@ -180,6 +179,8 @@ td.user {
 }
 td.user a {
   text-decoration: none;
+  /* display: flex;
+  gap:1rem */
 }
 td.user a p {
   font-weight: bold;
@@ -195,7 +196,13 @@ td.user img {
   height: 5rem;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #FFF;
+  border: 3px solid #ffffff7c
+}
+td.user img:hover{
+ transform: scale(1.3);
+ margin-left:1rem;
+ transition: 200ms;
+ cursor: pointer;
 }
 
 td .remove {
