@@ -75,7 +75,7 @@ header {
   max-height: 615px;
   border: 1px solid #4a808c;
   border-radius: 0.4rem;
-  overflow-y: scroll;
+  overflow-y:auto;
   position: relative;
   scroll-behavior: smooth;
 }
@@ -195,7 +195,7 @@ td.user img {
   height: 5rem;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid var(--primary-color);
+  border: 3px solid #FFF;
 }
 
 td .remove {

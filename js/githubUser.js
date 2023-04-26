@@ -8,7 +8,6 @@ export class GithubUser {
         name,
         public_repos,
         followers
-
       }))
 
   }
